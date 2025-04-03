@@ -1,0 +1,15 @@
+<!DOCTYPE >
+<html ng-app="myModule">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="./module1.js"></script>
+</head>
+<body ng-init="Count=8">
+<div ng-controller="myController">
+<button ng-click="Count=Count+1">Inc</button><br>
+<textarea>{{Count}}</textarea>
+<button ng-click="Count=Count-1">DEC</button><br>
+</div>
+
+</body>
+</html>

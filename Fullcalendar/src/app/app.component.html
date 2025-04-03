@@ -1,0 +1,29 @@
+<h1 class="titleHeader">Hello</h1>
+<button class="btn-primary" (click)="fetchServer()">fetch Server</button> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;<span><h1 [ngStyle]="{'color': color}">{{data}}</h1></span>
+<div>
+    <input type="text" [(ngModel)]="name" placeholder="Enter your name" />
+    <button (click)="getName(name)">Greet</button>
+    
+    <h3 *ngIf="name" [ngStyle]="{'color': color}">{{name}}</h3>
+  </div>
+
+  <button (click)="getUserDetails()">get UserList</button>
+  <table *ngIf="userdetails">
+    <thead>
+        <tr>
+            <td>NAME</td>
+            <td>AGE</td>
+            <td>ADDRESS</td>
+            <td>SALARY</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of userdetails">
+            <td>{{user.name}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.address}}</td>
+            <td>{{user.salary}}</td>
+        </tr>
+    </tbody>
+  </table>
+<full-calendar id="calendar" [options]='calendarOptions'></full-calendar>
