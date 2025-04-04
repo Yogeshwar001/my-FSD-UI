@@ -14,6 +14,7 @@ import { UserDetails } from './modals/UserDetails.modal';
 export class AppComponent implements OnInit{
   title = 'Fullcalendar';
   data:any;
+  error: string = '';
   name: string = '';
   userdetails:UserDetails |undefined;
   constructor(private cs:CommonService,private http:HttpClient){}

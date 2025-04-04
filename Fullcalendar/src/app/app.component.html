@@ -25,5 +25,11 @@
             <td>{{user.salary}}</td>
         </tr>
     </tbody>
-  </table>
+  </table><span><!-- app.component.html -->
+
+    <div *ngIf="error" class="error-message">
+      <p>An error occurred while connecting to the backend server: {{ error }}</p>
+    </div>
+
+    </span>
 <full-calendar id="calendar" [options]='calendarOptions'></full-calendar>
